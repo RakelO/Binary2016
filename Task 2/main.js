@@ -40,7 +40,9 @@ $(document).ready(function(){
 
 	$(document).on('click', '.delete-all', function(){
 		$('.line-through').remove();
-		$('.check-all').click();
+		if($('.check-all').is(':checked')){
+			$('.check-all').click();
+	}
 	});
 
 	var liValue;
